@@ -1,19 +1,43 @@
 import React from "react";
 
-function Food({ name }) {
-  return <h1>I like {name}</h1>;
+function Food({ name, picture }) {
+  return (
+    <div>
+      <h2>I like {name}</h2>
+      <img src={picture} />
+    </div>
+  );
 }
+
+const foodILike = [
+  {
+    name: "potato",
+    image:
+      "https://www.irishtimes.com/polopoly_fs/1.3967277.1564062363!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg",
+  },
+  {
+    name: "potato",
+    image:
+      "https://www.irishtimes.com/polopoly_fs/1.3967277.1564062363!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg",
+  },
+  {
+    name: "potato",
+    image:
+      "https://www.irishtimes.com/polopoly_fs/1.3967277.1564062363!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg",
+  },
+  {
+    name: "potato",
+    image:
+      "https://www.irishtimes.com/polopoly_fs/1.3967277.1564062363!/image/image.jpg_gen/derivatives/ratio_1x1_w1200/image.jpg",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <Food name="potato" />
-      {/* <Food
-        fav="kimbob"
-        something={true}
-        papapapa={["hello", 1, 2, 3, 4, true]}
-      /> */}
+      {foodILike.map((current) => (
+        <Food name={current.name} picture={current.image} />
+      ))}
     </div>
   );
 }
