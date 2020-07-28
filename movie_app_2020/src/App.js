@@ -12,7 +12,12 @@ class App extends React.Component {
     this.setState((current) => ({ count: current.count - 1 }));
   };
 
+  componentDidMount() {
+    console.log("component rendering");
+  }
+
   render() {
+    console.log("I'm render");
     return (
       <div>
         <h1>The number is: {this.state.count}</h1>
