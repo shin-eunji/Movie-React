@@ -5,25 +5,6 @@ class App extends React.Component {
     count: 0,
   };
 
-  // add = () => {
-  //   this.setState((current) => ({ count: current.count + 1 }));
-  // };
-  // remove = () => {
-  //   this.setState((current) => ({ count: current.count - 1 }));
-  // };
-
-  // componentDidMount() {
-  //   console.log("component rendering");
-  // }
-
-  // componentDidUpdate() {
-  //   console.log("I just Updated");
-  // }
-
-  // componentWillUnmount() {
-  //   console.log("goodbye, console");
-  // }
-
   render() {
     console.log("I'm render");
     return (
